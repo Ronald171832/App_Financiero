@@ -4,5 +4,22 @@
     android:layout_height="match_parent"
 
     android:orientation="vertical">
+    <TextView
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:textColor="@color/colorPrimary"
+        android:text="HISTORICOS"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/lv_idfacturas"/>
+    </LinearLayout>
 
 </LinearLayout>

@@ -55,6 +55,8 @@ public class PerfilFragment extends Fragment {
                     JSONObject root = new JSONObject(response);
                     JSONArray jsonArray = root.getJSONArray("datos");
                     String datos= (String) jsonArray.getJSONObject(0).get("paterno");
+                    datos=datos+" "+ (String) jsonArray.getJSONObject(0).get("nombre")+"\n"+
+                            (String) jsonArray.getJSONObject(0).get("ci")+"\n";
                     tv_nombre.setText(datos);
                 } catch (JSONException e) {
                     e.printStackTrace();
