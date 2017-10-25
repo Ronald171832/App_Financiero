@@ -1,5 +1,6 @@
 package com.proyectosi2.multibanco.multibanco.Fragmentos;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -11,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.proyectosi2.multibanco.multibanco.Perfil;
 import com.proyectosi2.multibanco.multibanco.R;
 import com.proyectosi2.multibanco.multibanco.rutaWS;
 
@@ -47,6 +49,9 @@ public class TransferenciaFragment extends Fragment {
                     webView.loadUrl(rutaWS.TRANSFERENCIA+fecha+"/"+monto.getText().toString()+"/"
                     +cuentaO.getText().toString()+"/"+cuentaD.getText().toString());
                     webView.setWebViewClient(new WebViewClient());
+                    Toast.makeText(getActivity(),"Transferencia realiza conrectamente "+monto.getText().toString()+" ",Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(getActivity(), Perfil.class));
+
                 }else{
                     Toast.makeText(getActivity(),"Ingresar Todos los Campos",Toast.LENGTH_SHORT).show();
                 }

@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.proyectosi2.multibanco.multibanco.Fragmentos.BancoFragment;
 import com.proyectosi2.multibanco.multibanco.Fragmentos.ConfiguracionesFragment;
 import com.proyectosi2.multibanco.multibanco.Fragmentos.PerfilFragment;
 import com.proyectosi2.multibanco.multibanco.Fragmentos.SaldoFragment;
@@ -24,6 +25,8 @@ public class Perfil extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.perfil_pantalla_principal);
         iniciar();
+        if (savedInstanceState == null) changeFragment(new PerfilFragment());
+
     }
 
     private void iniciar() {
@@ -43,7 +46,7 @@ public class Perfil extends AppCompatActivity {
                     changeFragment(new TransferenciaFragment());
                 } else if (item.getItemId() == R.id.favoritosItem) {
                     infoTextView.setText("Banco");
-
+                    changeFragment(new BancoFragment());
                 } else if (item.getItemId() == R.id.perfilItem) {
                     infoTextView.setText("Configiraciones");
                     changeFragment(new ConfiguracionesFragment());
@@ -60,5 +63,10 @@ public class Perfil extends AppCompatActivity {
                 .replace(R.id.main_fragment, targetFragment, "fragmento")
                 .setTransitionStyle(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
                 .commit();
+    }
+
+    @Override
+    public void onBackPressed() {
+        //
     }
 }

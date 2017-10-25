@@ -60,7 +60,7 @@ public class SaldoFragment extends Fragment {
                     ArrayList<String> lista = new ArrayList<>();
                     JSONObject root = new JSONObject(response);
                     JSONArray jsonArray = root.getJSONArray("historia");
-                    for (int i = 0; i < jsonArray.length(); i++) {
+                    for (int i = jsonArray.length()-1; i >=0; i--) {
                         try {
                             int monto = (int) jsonArray.getJSONObject(i).get("monto");
                             String tipo = (String) jsonArray.getJSONObject(i).get("tipo");
