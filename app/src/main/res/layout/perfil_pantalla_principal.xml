@@ -44,7 +44,8 @@
             android:id="@+id/bottomNavigationView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            design:menu="@menu/menu_mavigation" />
+            design:menu="@menu/menu_mavigation"
+            />
 
     </FrameLayout>
 </android.support.design.widget.CoordinatorLayout>

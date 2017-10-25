@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item
-        android:id="@+id/inicioItem"
-        android:icon="@android:drawable/ic_menu_myplaces"
-        android:title="Perfil" />
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
         android:id="@+id/buscarItem"
-        android:icon="@android:drawable/ic_menu_view"
+        android:icon="@drawable/ico_historico"
 
-        android:title="Saldo" />
+        android:title="Historico" />
 
     <item
         android:id="@+id/camaraItem"
@@ -25,8 +21,12 @@
 
     <item
         android:id="@+id/perfilItem"
-        android:icon="@android:drawable/ic_menu_agenda"
+        android:icon="@drawable/ico_banco"
 
-        android:title="Historico" />
+        android:title="Banco" />
+    <item
+        android:id="@+id/inicioItem"
+        android:icon="@drawable/ico_tarjeta"
+        android:title="Tarjeta" />
 
 </menu>
