@@ -7,12 +7,19 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.proyectosi2.multibanco.multibanco.Perfil">
+
+    <include android:id="@+id/perfil_tool_bar"
+        layout="@layout/nav_bar"
+        >
+    </include>
     <FrameLayout
+        android:layout_marginTop="55dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/main_fragment">
     </FrameLayout>
     <TextView
+        android:visibility="invisible"
         android:id="@+id/infoTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,6 +40,7 @@
             android:background="@drawable/shadow" />
 
         <android.support.design.widget.BottomNavigationView
+           android:background="#FF526586"
             android:id="@+id/bottomNavigationView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

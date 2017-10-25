@@ -9,6 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="200dp" />
 <TextView
+    android:textColor="#000000"
     android:layout_marginLeft="10dp"
     android:textStyle="bold"
     android:layout_marginTop="210dp"

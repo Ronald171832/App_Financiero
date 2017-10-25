@@ -7,7 +7,7 @@
     <TextView
         android:textStyle="bold"
         android:textSize="25dp"
-        android:textColor="@color/colorPrimary"
+        android:textColor="#ffffff"
         android:text="HISTORICOS"
         android:gravity="center"
         android:layout_width="match_parent"

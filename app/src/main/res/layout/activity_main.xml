@@ -7,10 +7,13 @@
     android:orientation="vertical"
     tools:context="com.proyectosi2.multibanco.multibanco.MainActivity">
 
+    <include android:id="@+id/perfil_tool_bar"
+        layout="@layout/nav_bar"
+        >
+    </include>
 
     <LinearLayout
         android:background="#ffffff"
-
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
