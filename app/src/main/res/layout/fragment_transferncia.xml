@@ -2,6 +2,52 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="20dp">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Realizar Transaccion"
+        android:textColor="@color/blanco"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_monto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Monto"
+        android:inputType="number" />
+
+
+    <EditText
+        android:id="@+id/et_cuentaOrigen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Cuenta Origen"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/et_cuentaDestino"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Cuenta Destino"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/bt_confirmarTransacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="   CONFIRMAR   " />
+
+    <WebView
+        android:id="@+id/webviewSocio"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:visibility="invisible" />
 </LinearLayout>

@@ -9,4 +9,5 @@ public class rutaWS {
     public final static String DATOS        = "http://ronald-apps.brazilsouth.cloudapp.azure.com/sistemaBancario/public/datos/";
     public final static String HISTORICO    = "http://ronald-apps.brazilsouth.cloudapp.azure.com/sistemaBancario/public/historia/";
     public final static String SALDO    = "http://ronald-apps.brazilsouth.cloudapp.azure.com/sistemaBancario/public/saldo/";
+    public final static String TRANSFERENCIA    = "http://ronald-apps.brazilsouth.cloudapp.azure.com/sistemaBancario/public/transaccion/1/";
 }

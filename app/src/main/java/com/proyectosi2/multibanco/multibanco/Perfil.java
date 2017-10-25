@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.proyectosi2.multibanco.multibanco.Fragmentos.ConfiguracionesFragment;
 import com.proyectosi2.multibanco.multibanco.Fragmentos.PerfilFragment;
 import com.proyectosi2.multibanco.multibanco.Fragmentos.SaldoFragment;
 import com.proyectosi2.multibanco.multibanco.Fragmentos.TransferenciaFragment;
@@ -45,6 +46,8 @@ public class Perfil extends AppCompatActivity {
 
                 } else if (item.getItemId() == R.id.perfilItem) {
                     infoTextView.setText("Configiraciones");
+                    changeFragment(new ConfiguracionesFragment());
+
                 }
                 return true;
             }
