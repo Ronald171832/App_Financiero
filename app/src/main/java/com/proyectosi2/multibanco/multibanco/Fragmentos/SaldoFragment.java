@@ -60,13 +60,15 @@ public class SaldoFragment extends Fragment {
                     ArrayList<String> lista = new ArrayList<>();
                     JSONObject root = new JSONObject(response);
                     JSONArray jsonArray = root.getJSONArray("historia");
-                    System.out.println(jsonArray + "------------------------------------");
                     for (int i = 0; i < jsonArray.length(); i++) {
                         try {
                             int monto = (int) jsonArray.getJSONObject(i).get("monto");
                             String tipo = (String) jsonArray.getJSONObject(i).get("tipo");
                             String moneda = (String) jsonArray.getJSONObject(i).get("moneda");
-                            lista.add(monto + " " + moneda + "  " + tipo);
+                            String detalle = (String) jsonArray.getJSONObject(i).get("detalle");
+                            String fecha = (String) jsonArray.getJSONObject(i).get("fecha");
+
+                            lista.add(monto + " " + moneda + "  " + tipo+"  "+detalle+"  "+fecha);
                         } catch (JSONException e) {
                             Log.e("Parser JSON", e.toString());
                         }

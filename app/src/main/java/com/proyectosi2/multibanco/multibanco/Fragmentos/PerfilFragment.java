@@ -28,18 +28,45 @@ public class PerfilFragment extends Fragment {
     private View parentView;
     SharedPreferences sharedPreferences;
     String correo;
-    TextView tv_nombre;
+    TextView tv_nombre,tv_saldo;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         parentView = inflater.inflate(R.layout.fragment_perfil, container, false);
         //setUpViews();
         iniciar();
         cargarDatos();
+        cargarSaldo();
         return parentView;
+    }
+
+    private void cargarSaldo() {
+        sharedPreferences = getActivity().getSharedPreferences("multibanco", MODE_PRIVATE);
+        correo = sharedPreferences.getString("correo", "");
+        String URL = rutaWS.SALDO + correo;
+        RequestQueue queue = Volley.newRequestQueue(getActivity());
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, URL, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONObject root = new JSONObject(response);
+                  //  JSONArray jsonArray = root.getJSONArray("saldoactual");
+                    int saldo= (int) root.getJSONObject("saldoactual").get("saldo");
+                    tv_saldo.setText(saldo+" "+root.getJSONObject("saldoactual").get("moneda"));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+            }
+        });
+        queue.add(stringRequest);
     }
 
     private void iniciar() {
     tv_nombre=(TextView)parentView.findViewById(R.id.tv_nombre_perfil);
+        tv_saldo=(TextView)parentView.findViewById(R.id.tv_saldo_perfil);
 
     }
 
