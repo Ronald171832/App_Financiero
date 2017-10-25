@@ -3,6 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/inicioItem"
+        android:icon="@drawable/ico_tarjeta"
+        android:title="Tarjeta" />
+    <item
         android:id="@+id/buscarItem"
         android:icon="@drawable/ico_historico"
 
@@ -10,23 +14,20 @@
 
     <item
         android:id="@+id/camaraItem"
-        android:icon="@android:drawable/ic_dialog_info"
-        android:title="Banco" />
+        android:icon="@drawable/ico_transferencia"
+        android:title="Transferencia" />
 
     <item
         android:id="@+id/favoritosItem"
-        android:icon="@android:drawable/ic_menu_agenda"
-
-        android:title="Transferencias" />
-
-    <item
-        android:id="@+id/perfilItem"
         android:icon="@drawable/ico_banco"
 
         android:title="Banco" />
+
     <item
-        android:id="@+id/inicioItem"
-        android:icon="@drawable/ico_tarjeta"
-        android:title="Tarjeta" />
+        android:id="@+id/perfilItem"
+        android:icon="@drawable/ico_logout"
+
+        android:title="Salir" />
+
 
 </menu>
