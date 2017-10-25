@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.proyectosi2.multibanco.multibanco.Fragmentos.PerfilFragment;
 import com.proyectosi2.multibanco.multibanco.Fragmentos.SaldoFragment;
+import com.proyectosi2.multibanco.multibanco.Fragmentos.TransferenciaFragment;
 
 public class Perfil extends AppCompatActivity {
 
@@ -31,17 +32,19 @@ public class Perfil extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 if (item.getItemId() == R.id.inicioItem) {
-                    infoTextView.setText("Perfil");
+                    infoTextView.setText("Tarjeta");
                     changeFragment(new PerfilFragment());
                 } else if (item.getItemId() == R.id.buscarItem) {
-                    infoTextView.setText("Saldo");
+                    infoTextView.setText("Historico");
                     changeFragment(new SaldoFragment());
                 } else if (item.getItemId() == R.id.camaraItem) {
-                    infoTextView.setText("Banco");
-                } else if (item.getItemId() == R.id.favoritosItem) {
                     infoTextView.setText("Transferencias");
+                    changeFragment(new TransferenciaFragment());
+                } else if (item.getItemId() == R.id.favoritosItem) {
+                    infoTextView.setText("Banco");
+
                 } else if (item.getItemId() == R.id.perfilItem) {
-                    infoTextView.setText("Historico");
+                    infoTextView.setText("Configiraciones");
                 }
                 return true;
             }
