@@ -30,7 +30,7 @@ public class Perfil extends AppCompatActivity {
     }
 
     private void iniciar() {
-        int ronald;
+        double manuel=1.0;
         infoTextView = (TextView) findViewById(R.id.infoTextView);
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
