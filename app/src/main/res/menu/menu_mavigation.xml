@@ -27,7 +27,7 @@
         android:id="@+id/perfilItem"
         android:icon="@drawable/ico_logout"
 
-        android:title="Salir" />
+        android:title="Configuraciones" />
 
 
 </menu>

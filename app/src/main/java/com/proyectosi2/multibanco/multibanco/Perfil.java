@@ -29,7 +29,7 @@ public class Perfil extends AppCompatActivity {
 
     }
 
-    // SOY MANUEL
+    // SOY RONALD
     private void iniciar() {
         infoTextView = (TextView) findViewById(R.id.infoTextView);
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavigationView);
@@ -49,7 +49,7 @@ public class Perfil extends AppCompatActivity {
                     infoTextView.setText("Banco");
                     changeFragment(new BancoFragment());
                 } else if (item.getItemId() == R.id.perfilItem) {
-                    infoTextView.setText("Configiraciones");
+                    infoTextView.setText("Configuraciones");
                     changeFragment(new ConfiguracionesFragment());
 
                 }
