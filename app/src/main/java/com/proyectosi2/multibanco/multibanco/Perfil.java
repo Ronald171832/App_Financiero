@@ -29,7 +29,7 @@ public class Perfil extends AppCompatActivity {
 
     }
 
-    // SOY RONALD
+    // SOY RONALD MANUEL
     private void iniciar() {
         infoTextView = (TextView) findViewById(R.id.infoTextView);
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavigationView);
