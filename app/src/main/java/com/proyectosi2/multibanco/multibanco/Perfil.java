@@ -52,7 +52,6 @@ public class Perfil extends AppCompatActivity {
                 } else if (item.getItemId() == R.id.perfilItem) {
                     infoTextView.setText("Configuraciones");
                     changeFragment(new ConfiguracionesFragment());
-
                 }
                 return true;
             }
